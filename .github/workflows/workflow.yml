@@ -15,9 +15,10 @@ jobs:
           node-version: ">=16.0.0"
       - run: npm install
       - run: npm run build
-      - name: Deploy to GitHub Pages 🐣
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy
+        uses: crazy-max/ghaction-github-pages@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
-          publish_branch: gh-pages
+          target_branch: gh-pages
+          build_dir: .
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
