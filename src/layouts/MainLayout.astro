@@ -1,14 +1,14 @@
 ---
 import * as CONFIG from '../config';
 import Nav from '../components/Nav/Nav.astro';
-console.log(Astro.site);
+const content = Astro.props;
 ---
 
 <html lang="en">
     <head>   
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
-        <title>{CONFIG.SITE.title}</title>    
+        <title>{content.title ? `${content.title} - ${CONFIG.SITE.title}` : CONFIG.SITE.title}</title>    
         <link rel="stylesheet" href={Astro.resolve('../styles/global.scss')}>
         <link rel="stylesheet" href={Astro.resolve('../styles/home.scss')}>
     </head>
