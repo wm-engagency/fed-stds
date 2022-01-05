@@ -3,8 +3,8 @@
 # Edit your project details here.
 # Remember to add API_TOKEN_GITHUB in repo Settings > Secrets as well!
 env:
-  githubEmail: <YOUR GITHUB EMAIL ADDRESS>
-  deployToRepo: <NAME OF REPO TO DEPLOY TO (E.G. <YOUR USERNAME>.github.io)>
+  githubEmail: william.harrison@engagency.com
+  deployToRepo: wm-engagency.github.io
 
 name: Github Pages Astro CI
 
