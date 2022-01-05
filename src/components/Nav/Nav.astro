@@ -6,7 +6,7 @@ import { NAV } from '../../config';
     <ul>
         {NAV.map((item) => (
             <li>
-                <a href={item.link} class="nav-item">{item.text}</a>
+                <a href={`${Astro.site.pathname}${item.link}`} class="nav-item">{item.text}</a>
             </li>
         ))}
     </ul>
