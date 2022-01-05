@@ -13,8 +13,8 @@ export const OPEN_GRAPH = {
 export const GITHUB_EDIT_URL = ``;
 
 export const NAV = [
-    { text: 'HTML', link: './html'},
-    { text: 'JavaScript', link: './javascript'},
-    { text: 'SCSS', link: './scss'},
-    { text: 'Git', link: './git'},
+    { text: 'HTML', link: 'html'},
+    { text: 'JavaScript', link: 'javascript'},
+    { text: 'SCSS', link: 'scss'},
+    { text: 'Git', link: 'git'},
 ];
