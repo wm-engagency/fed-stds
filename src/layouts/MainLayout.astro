@@ -1,6 +1,7 @@
 ---
 import * as CONFIG from '../config';
 import Nav from '../components/Nav/Nav.astro';
+console.log(Astro.site);
 ---
 
 <html lang="en">
@@ -16,7 +17,7 @@ import Nav from '../components/Nav/Nav.astro';
             <header>
                 <div>
                     <a href={Astro.site.pathname}>
-                        <img width="60" height="80" src={Astro.resolve("../../assets/logo.svg")} alt="Engagency logo">
+                        <img width="60" height="80" src={`${Astro.site.pathname}assets/logo.svg`} alt="Engagency logo">
                     </a>
                 </div>
             </header>
