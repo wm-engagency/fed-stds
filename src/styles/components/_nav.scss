@@ -1,0 +1,11 @@
+.nav {
+    @apply font-semibold leading-6 mb-6;
+
+    ul {
+        @apply flex space-x-8 justify-center;
+    }
+
+    &-item {
+        @apply mr-1 hover:text-orange-500;
+    }
+}

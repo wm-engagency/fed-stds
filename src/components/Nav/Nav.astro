@@ -1,0 +1,13 @@
+---
+import { NAV } from '../../config';
+---
+
+<nav class="nav">
+    <ul>
+        {NAV.map((item) => (
+            <li>
+                <a href={item.link} class="nav-item">{item.text}</a>
+            </li>
+        ))}
+    </ul>
+</nav>

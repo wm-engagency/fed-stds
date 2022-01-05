@@ -1,0 +1,26 @@
+---
+import * as CONFIG from '../config';
+import Nav from '../components/Nav/Nav.astro';
+---
+
+<html lang="en">
+    <head>   
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>{CONFIG.SITE.title}</title>    
+        <link rel="stylesheet" href={Astro.resolve('../styles/global.scss')}>
+        <link rel="stylesheet" href={Astro.resolve('../styles/home.scss')}>
+    </head>
+    <body>
+        <main class="container mx-auto">    
+            <header>
+                <div>
+                    <img width="60" height="80" src="/assets/logo.svg" alt="Astro logo">
+                </div>
+            </header>
+            <Nav />
+            <h1>{CONFIG.SITE.title}</h1>
+            <slot />
+        </main>
+    </body>
+</html>
