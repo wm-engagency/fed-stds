@@ -4,7 +4,7 @@
 # Remember to add API_TOKEN_GITHUB in repo Settings > Secrets as well!
 env:
   githubEmail: william.harrison@engagency.com
-  deployToRepo: wm-engagency.github.io
+  deployToRepo: fed-stds
 
 name: Github Pages Astro CI
 
