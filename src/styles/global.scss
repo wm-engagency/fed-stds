@@ -16,6 +16,10 @@
 	--user-font-scale: 1rem - 16px;
 	font-size: clamp(0.875rem, 0.4626rem + 1.0309vw + var(--user-font-scale), 1.125rem);
 }
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
 
 body {
 	padding: 4rem 2rem;
