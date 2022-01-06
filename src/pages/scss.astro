@@ -2,6 +2,10 @@
 // Component Imports
 import Tour from '../components/Tour.astro';
 import MainLayout from '../layouts/MainLayout.astro';
+import { Markdown } from 'astro/components';
+const data = await fetch('https://raw.githubusercontent.com/alexchantastic/scss-style-guide/master/README.md').then((response) => response.text());
+const title = data.match(/SCSS Style Guide/g);
+let parsed = data.replace(/# SCSS Style Guide/g, '');
 // You can import components from any supported Framework here!
 
 
@@ -9,12 +13,13 @@ import MainLayout from '../layouts/MainLayout.astro';
 // You can write any JavaScript/TypeScript that you'd like here.
 // It will run during the build, but never in the browser.
 // All variables are available to use in the HTML template below.
-let title = 'Stylesheets';
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 
 <MainLayout title={title}>
-	Something about SCSS will live here
+	<Markdown>
+		{parsed}
+	</Markdown>
 </MainLayout>
