@@ -38,6 +38,11 @@ header > div {
 	align-items: center;
 }
 
+header img {
+	width: 2em;
+	height: 2.667em;
+}
+
 @media (prefers-color-scheme: dark) {
 	body {
 		background: #111827;
