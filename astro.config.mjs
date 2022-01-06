@@ -6,7 +6,7 @@ export default {
   buildOptions: {
     site: 'https://wm-engagency.github.io/fed-stds/',           // Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
     // sitemap: true,
-    // pageUrlFormat: 'file',        // Generate sitemap (set to "false" to disable)
+    pageUrlFormat: 'file',        // Generate sitemap (set to "false" to disable)
   },
   devOptions: {
     // hostname: 'localhost',  // The hostname to run the dev server on.

@@ -1,16 +1,15 @@
 ---
 import * as CONFIG from '../config';
 import Nav from '../components/Nav/Nav.astro';
+import Head from '../components/Head.astro';
 const content = Astro.props;
+console.log(Astro.site);
 ---
 
 <html lang="en">
-    <head>   
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
-        <title>{content.title ? `${content.title} - ${CONFIG.SITE.title}` : CONFIG.SITE.title}</title>    
-        <link rel="stylesheet" href={Astro.resolve('../styles/global.scss')}>
-        <link rel="stylesheet" href={Astro.resolve('../styles/home.scss')}>
+    <head>
+        <Head />
+        <title>{content.title ? `${content.title} - ${CONFIG.SITE.title}` : CONFIG.SITE.title}</title>  
     </head>
     <body>
         <main class="container mx-auto">    
@@ -22,8 +21,12 @@ const content = Astro.props;
                 </div>
             </header>
             <Nav />
-            <h1>{CONFIG.SITE.title}</h1>
-            <slot />
+            <h1>{content.title}</h1>
+            <section class="prose">
+                <article>
+                    <slot />
+                </article>
+            </section>
         </main>
     </body>
 </html>
