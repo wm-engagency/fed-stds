@@ -1,0 +1,14 @@
+---
+const content = Astro.props;
+---
+
+<nav>
+  <h2>Table of Contents</h2>
+    <ul>
+        {content.internalLinks.map((item) => (
+            <li>
+                <a href={`#${item.link}`} class="nav-item">{item.text}</a>
+            </li>
+        ))}
+    </ul>
+</nav>
