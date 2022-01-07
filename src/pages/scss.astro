@@ -2,23 +2,19 @@
 // Component Imports
 import MainLayout from '../layouts/MainLayout.astro';
 import { Markdown } from 'astro/components';
-const data = await fetch('https://raw.githubusercontent.com/alexchantastic/scss-style-guide/master/README.md').then((response) => response.text());
-const title = data.match(/SCSS Style Guide/g);
-let parsed = data.replace(/# SCSS Style Guide/g, '');
-// You can import components from any supported Framework here!
+import PageNav from '../components/PageNav/PageNav.astro';
 
-
-// Component Script:
-// You can write any JavaScript/TypeScript that you'd like here.
-// It will run during the build, but never in the browser.
-// All variables are available to use in the HTML template below.
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
+// Data Fetching & Set-up
+const data = Astro.fetchContent('../data/scss.md');
+const title = data[0].title;
+const description = data[0].description;
+const internalLinks = data[0].toc;
 ---
 
 <MainLayout title={title}>
+	{description}
+	<PageNav internalLinks={internalLinks} />
 	<Markdown>
-		{parsed}
+		{data[0].astro.source}
 	</Markdown>
 </MainLayout>
