@@ -11,7 +11,7 @@ const content = Astro.props;
         <title>{content.title ? `${content.title} - ${CONFIG.SITE.title}` : CONFIG.SITE.title}</title>  
     </head>
     <body>
-        <main class="container mx-auto">    
+        <main class="container mx-auto prose">    
             <header>
                 <div>
                     <a href={Astro.site.pathname}>
@@ -21,7 +21,7 @@ const content = Astro.props;
             </header>
             <Nav />
             <h1>{content.title}</h1>
-            <section class="prose">
+            <section>
                 <article>
                     <slot />
                 </article>

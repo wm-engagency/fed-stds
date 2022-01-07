@@ -2,7 +2,7 @@
     @apply font-semibold leading-6 mb-6;
 
     ul {
-        @apply flex space-x-8 justify-center;
+        @apply flex space-x-8 justify-center list-none;
     }
 
     &-item {
