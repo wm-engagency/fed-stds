@@ -35,14 +35,11 @@ jobs:
           touch ./dist/.nojekyll
 
       # Push to your pages repo
-      - name: Push to pages repo
-        uses: cpina/github-action-push-to-another-repository@main
+      - name: Deploy to GitHub Pages 🐣
+        uses: peaceiris/actions-gh-pages@v3
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-directory: 'dist'
-          destination-github-username: ${{ github.actor }}
-          destination-repository-name: ${{ env.deployToRepo }}
-          user-email: ${{ env.githubEmail }}
+          publish_dir: 'dist'
           commit-message: Deploy ORIGIN_COMMIT
-          target-branch: gh-pages
+          publish_branch: gh-pages
