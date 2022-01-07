@@ -41,5 +41,5 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
           publish_dir: 'dist'
-          commit-message: Deploy ORIGIN_COMMIT
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
