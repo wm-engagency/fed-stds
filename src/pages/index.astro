@@ -1,6 +1,6 @@
 ---
 // Component Imports
-import Tour from '../components/Tour.astro';
+import Overview from '../components/Overview.astro';
 import MainLayout from '../layouts/MainLayout.astro';
 // You can import components from any supported Framework here!
 
@@ -9,14 +9,13 @@ import MainLayout from '../layouts/MainLayout.astro';
 // You can write any JavaScript/TypeScript that you'd like here.
 // It will run during the build, but never in the browser.
 // All variables are available to use in the HTML template below.
-let title = 'My Astro Site';
+let title = 'Front End Development Standards & "Best" Practices';
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 
-<MainLayout>
-
+<MainLayout title={title}>
         <link rel="stylesheet" type="text/css" href={Astro.resolve('../styles/home.scss')}>
-	<Tour />
+	<Overview />
 </MainLayout>
