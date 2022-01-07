@@ -1,10 +1,6 @@
 # Workflow to build and deploy to your GitHub Pages repo.
 
 # Edit your project details here.
-# Remember to add API_TOKEN_GITHUB in repo Settings > Secrets as well!
-env:
-  githubEmail: william.harrison@engagency.com
-  deployToRepo: fed-stds
 
 name: Github Pages Astro CI
 
@@ -37,8 +33,6 @@ jobs:
       # Push to your pages repo
       - name: Deploy to GitHub Pages 🐣
         uses: peaceiris/actions-gh-pages@v3
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
           publish_dir: 'dist'
           github_token: ${{ secrets.GITHUB_TOKEN }}
