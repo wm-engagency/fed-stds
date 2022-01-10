@@ -6,26 +6,26 @@ const content = Astro.props;
 ---
 
 <html lang="en">
-    <head>
-        <Head />
-        <title>{content.title ? `${content.title} - ${CONFIG.SITE.title}` : CONFIG.SITE.title}</title>  
-    </head>
-    <body>
-        <main class="container mx-auto prose">    
-            <header>
-                <div>
-                    <a href={Astro.site.pathname}>
-                        <img width="60" height="80" src={`${Astro.site.pathname}assets/logo.svg`} alt="Engagency logo">
-                    </a>
-                </div>
-            </header>
-            <Nav />
-            <h1>{content.title}</h1>
-            <section>
-                <article>
-                    <slot />
-                </article>
-            </section>
-        </main>
-    </body>
+  <head>
+    <Head />
+      <title>{content.title ? `${content.title} - ${CONFIG.SITE.title}` : CONFIG.SITE.title}</title>  
+  </head>
+  <body>
+    <main class="container mx-auto prose">    
+      <header>
+        <div>
+          <a href={Astro.site.pathname}>
+            <img width="60" height="80" src={`${Astro.site.pathname}assets/logo.svg`} alt="Engagency logo">
+          </a>
+        </div>
+      </header>
+      <Nav />
+      <h1>{content.title}</h1>
+      <section>
+        <article>
+            <slot />
+        </article>
+      </section>
+    </main>
+  </body>
 </html>
