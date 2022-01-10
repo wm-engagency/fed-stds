@@ -39,6 +39,17 @@ header > div {
 @media (prefers-color-scheme: dark) {
 	body {
 		background: #111827;
-		color: #fff;
+		color: #f9fafb;
 	}
+
+  .prose {
+    --tw-prose-body: #f9fafb;
+    --tw-prose-bold: #f9fafb;
+    --tw-prose-headings: #f9fafb;
+    --tw-prose-links: #f9fafb;
+    --tw-prose-code: #f9fafb;
+    --tw-prose-pre-bg: #f9fafb;
+    --tw-prose-pre-code: #111827;
+    --tw-prose-quotes: #f9fafb;
+  }
 }
