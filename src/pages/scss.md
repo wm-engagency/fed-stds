@@ -1,4 +1,5 @@
 ---
+layout: ../layouts/MainLayout.astro
 title: SCSS Style Guide
 toc:
   - text: Code Formatting
@@ -42,10 +43,14 @@ description: |
 * Avoid the use of SASS color functions (e.g., `lighten(#000)`)
 * Avoid the use of `!important`
 
+[return to top]()
+
 ### Comments
 
 * Use the SCSS comment syntax (`//`) for all comments
 * Use comment headings appropriately
+
+[return to top]()
 
 ### Example
 
@@ -89,6 +94,8 @@ description: |
 .baz { font-size: 24px; }
 ```
 
+[return to top]()
+
 ## Units
 
 * Use `px` for things that should scale in a fixed manner
@@ -97,6 +104,8 @@ description: |
 * Use `%` for things that should scale with the parent element
 * Use `vw` and `vh` for things that should scale with the viewport
 * `line-height` should be a unitless multiplier of `font-size`
+
+[return to top]()
 
 ## Specificity & Naming
 
@@ -115,6 +124,8 @@ Rules and properties should only be as specific as they need to be. Ideally, you
   ...
 }
 ```
+
+[return to top]()
 
 ### Selectors
 
@@ -145,6 +156,8 @@ div.my-selector {
   ...
 }
 ```
+
+[return to top]()
 
 ### Naming Conventions
 
@@ -179,13 +192,19 @@ Rules should be named semantically so that someone looking at just the markup sh
 
 Class names are broken down first into a block (`.media`). Then, into elements (`.media__object` and `.media__body`). And finally into modifiers (`.media__object--reversed`).
 
+[return to top]()
+
 ### Nesting
 
 While nesting is a great feature of SASS, it can easily make things much more complex and hard to digest. Nesting should be limited to 3 levels or less.
 
+[return to top]()
+
 ### Extending
 
 While extending selectors (`@extend`) is a great feature of SASS, it can easily make the output CSS much more complex and hard to digest so it is best to avoid using them. More often than not, it would make more sense to pull something out into a mixin rather than use an extend.
+
+[return to top]()
 
 ### Shorthand
 
@@ -205,6 +224,8 @@ Limit the use of shorthand declarations if you do not need to explicitly set add
 }
 ```
 
+[return to top]()
+
 ### Media Queries
 
 SASS allows media queries to be nested inside of a selector. This can make our code very easy to digest when working in responsive styles.
@@ -218,6 +239,8 @@ SASS allows media queries to be nested inside of a selector. This can make our c
   }
 }
 ```
+
+[return to top]()
 
 ### Variables
 
@@ -235,6 +258,8 @@ $beta: #fff;
 $color-black: #000;
 $color-white: #fff;
 ```
+
+[return to top]()
 
 ## Ordering
 
@@ -297,9 +322,13 @@ $color-white: #fff;
 }
 ```
 
+[return to top]()
+
 ## Linting
 
 It is best to leverage a linter like [stylelint](https://github.com/stylelint/stylelint) to make it easy to adhere to the following guidelines. You can install this repository through your package manager and point to it in your own stylelint config file. Alternatively, you can copy the stylelint config file ([`.stylelintrc`](https://github.com/alexchantastic/scss-style-guide/blob/master/.stylelintrc)) included in this repository into your project.
+
+[return to top]()
 
 ### Installation
 
@@ -309,11 +338,15 @@ It is best to leverage a linter like [stylelint](https://github.com/stylelint/st
 yarn add stylelint scss-style-guide --dev
 ```
 
+[return to top]()
+
 #### npm
 
 ```
 npm install stylelint scss-style-guide --save-dev
 ```
+
+[return to top]()
 
 #### `.stylelintrc`
 
@@ -324,3 +357,5 @@ npm install stylelint scss-style-guide --save-dev
   ]
 }
 ```
+
+[return to top]()
