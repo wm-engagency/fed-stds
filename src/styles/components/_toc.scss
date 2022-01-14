@@ -1,0 +1,11 @@
+.toc {
+    @apply font-semibold leading-6 mb-6;
+
+    ul {
+        @apply list-none p-0;
+    }
+
+    &-item {
+        @apply mr-1 hover:text-orange-500;
+    }
+}

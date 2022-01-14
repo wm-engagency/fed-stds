@@ -2,16 +2,17 @@
 import * as CONFIG from '../config';
 import Nav from '../components/Nav/Nav.astro';
 import Head from '../components/Head.astro';
-const content = Astro.props;
+import TableOfContents from '../components/TableOfContents/TableOfContents.astro';
+const { title, description, toc } = Astro?.props?.content;
 ---
 
 <html lang="en">
   <head>
     <Head />
-      <title>{content.title ? `${content.title} - ${CONFIG.SITE.title}` : CONFIG.SITE.title}</title>  
+      <title>{title ? `${title} - ${CONFIG.SITE.title}` : CONFIG.SITE.title}</title>  
   </head>
   <body>
-    <main class="container mx-auto prose">    
+    <main class="container mx-auto">    
       <header>
         <div>
           <a href={Astro.site.pathname}>
@@ -19,13 +20,17 @@ const content = Astro.props;
           </a>
         </div>
       </header>
-      <Nav />
-      <h1>{content.title}</h1>
-      <section>
-        <article>
-            <slot />
-        </article>
-      </section>
+      <div>
+        <Nav />
+        <section class="content prose mx-auto">
+          {title ? <h1>{title}</h1> : null}
+          {description ? <p>{description}</p> : null}
+          {toc ? <TableOfContents internalLinks={toc} /> : null}
+          <article>
+              <slot />
+          </article>
+        </section>
+      </div>
     </main>
   </body>
 </html>

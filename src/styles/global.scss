@@ -4,6 +4,7 @@
 
 @import './typography';
 @import './components/nav';
+@import './components/toc';
 
 * {
 	box-sizing: border-box;
@@ -53,3 +54,11 @@ header > div {
     --tw-prose-quotes: #f9fafb;
   }
 }
+
+pre {
+  @apply whitespace-pre;
+}
+
+// code {
+//   @apply break-words;
+// }

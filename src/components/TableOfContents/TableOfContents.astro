@@ -2,7 +2,7 @@
 const content = Astro.props;
 ---
 
-<nav>
+<nav class="toc" id="table-of-contents">
   <h2>Table of Contents</h2>
     <ul>
         {content.internalLinks.map((item) => (

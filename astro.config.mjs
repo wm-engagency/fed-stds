@@ -13,4 +13,10 @@ export default {
     // port: 3000,             // The port to run the dev server on.
   },
   renderers: [],
+  vite: {
+    build: {
+      cssCodeSplit: false,
+      minify: false,
+    },
+  },
 };
