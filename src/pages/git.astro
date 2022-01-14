@@ -8,12 +8,14 @@ import MainLayout from '../layouts/MainLayout.astro';
 // You can write any JavaScript/TypeScript that you'd like here.
 // It will run during the build, but never in the browser.
 // All variables are available to use in the HTML template below.
-let title = 'How to Git';
+let content = {
+  title: 'How to Git'
+};
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 
-<MainLayout title={title}>
+<MainLayout content={content}>
 	Something about Git will live here
 </MainLayout>
