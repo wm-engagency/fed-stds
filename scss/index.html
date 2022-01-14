@@ -7,11 +7,11 @@
 <link rel="icon" href="/fed-stds/favicon.ico" sizes="any">
 
 <!-- Global CSS -->
-<link rel="stylesheet" type="text/css" href="../assets/global.8c5e4c48.css"><link rel="stylesheet" type="text/css" href="../assets/html.a2693ff3.css">
+<link rel="stylesheet" type="text/css" href="../assets/global.8d03a3f2.css"><link rel="stylesheet" type="text/css" href="../assets/git.8502b4ef.css">
       <title>SCSS Style Guide - Front End Development Standards &amp; "Best" Practices</title>  
   </head>
   <body>
-    <main class="container mx-auto prose">    
+    <main class="container mx-auto">    
       <header>
         <div>
           <a href="/fed-stds/">
@@ -19,7 +19,8 @@
           </a>
         </div>
       </header>
-      
+      <div>
+        
 <nav class="nav">
     <ul>
         <li>
@@ -33,14 +34,14 @@
             </li>
     </ul>
 </nav>
-      <h1>SCSS Style Guide</h1>
-      <section>
-        <article>
-            This document outlines best practices on writing semantic, scalable, and modular CSS. Note that these guidelines assume the use of <a href="http://sass-lang.com/">SASS</a>, a CSS pre-processor, and more specifically, the SCSS syntax. The basis for this guide is to outline distinct rules to format and write SCSS, though the principles outlined here can be applied to CSS or SASS syntax as well.
+        <section class="content prose mx-auto">
+          <h1>SCSS Style Guide</h1>
+          <p>This document outlines best practices on writing semantic, scalable, and modular CSS. Note that these guidelines assume the use of <a href="http://sass-lang.com/">SASS</a>, a CSS pre-processor, and more specifically, the SCSS syntax. The basis for this guide is to outline distinct rules to format and write SCSS, though the principles outlined here can be applied to CSS or SASS syntax as well.
 
 This guide borrows concepts from <a href="http://codeguide.co/">Code Guide by @mdo</a>, <a href="https://github.com/necolas/idiomatic-css">Idiomatic CSS</a>, and <a href="http://bem.info/method/">BEM</a>.
-
-<nav>
+</p>
+          
+<nav class="toc" id="table-of-contents">
   <h2>Table of Contents</h2>
     <ul>
         <li>
@@ -56,37 +57,32 @@ This guide borrows concepts from <a href="http://codeguide.co/">Code Guide by @m
             </li>
     </ul>
 </nav>
-<h2 id="code-formatting">Code Formatting</h2>
-<h3 id="declaractions">Declaractions</h3>
-<ul>
+          <article>
+              <h2 id="code-formatting">Code Formatting</h2><h3 id="declaractions">Declaractions</h3><ul>
 <li>Use soft tabs with a two space indent</li>
-<li>A selector should have a single space between the name and the <code>{</code></li>
-<li>A property should have a single space between the <code>:</code> and the value</li>
+<li>A selector should have a single space between the name and the <code data-astro-raw="">{</code></li>
+<li>A property should have a single space between the <code data-astro-raw="">:</code> and the value</li>
 <li>There should be only one property per line</li>
 <li>Unrelated or non-sequenced selectors should have a single new line between them</li>
 <li>Colors should be specified in hex or rgba values</li>
-<li>Hex values should be in lowercase and use shorthand if possible (e.g., <code>#fff</code>)</li>
-<li>rgba values should utilize SASS conversion to maintain the hex value (e.g., <code>rgba(#fff, 0.5)</code>)</li>
-<li>Comma-separated values should have a single space after the <code>,</code> if they appear on a single line</li>
+<li>Hex values should be in lowercase and use shorthand if possible (e.g., <code data-astro-raw="">#fff</code>)</li>
+<li>rgba values should utilize SASS conversion to maintain the hex value (e.g., <code data-astro-raw="">rgba(#fff, 0.5)</code>)</li>
+<li>Comma-separated values should have a single space after the <code data-astro-raw="">,</code> if they appear on a single line</li>
 <li>Multiple comma-separated property values should appear indented on multiple lines with one declaration per line</li>
-<li>Decimal values should start with a leading number before the <code>.</code> (e.g., <code>0.5</code>)</li>
-<li>Psuedo selectors and elements should be denoted using a single <code>:</code> (e.g., <code>:hover</code>, <code>:before</code>)</li>
+<li>Decimal values should start with a leading number before the <code data-astro-raw="">.</code> (e.g., <code data-astro-raw="">0.5</code>)</li>
+<li>Psuedo selectors and elements should be denoted using a single <code data-astro-raw="">:</code> (e.g., <code data-astro-raw="">:hover</code>, <code data-astro-raw="">:before</code>)</li>
 <li>Vendor prefixes should be taken care of by an <a href="https://github.com/postcss/autoprefixer">autoprefixer</a></li>
-<li>Use single quotes (e.g, <code>'foo'</code>)</li>
-<li>Do not specify units for zero-values (e.g, <code>margin: 0</code>)</li>
+<li>Use single quotes (e.g, <code data-astro-raw="">'foo'</code>)</li>
+<li>Do not specify units for zero-values (e.g, <code data-astro-raw="">margin: 0</code>)</li>
 <li>Single property declarations should appear on a single line</li>
 <li>Multi property declarations should appear on multiple lines with one rule per line</li>
-<li>Mixins without properties should omit the <code>()</code> (e.g., <code>@include my-mixin</code>)</li>
-<li>Avoid the use of SASS color functions (e.g., <code>lighten(#000)</code>)</li>
-<li>Avoid the use of <code>!important</code></li>
-</ul>
-<h3 id="comments">Comments</h3>
-<ul>
-<li>Use the SCSS comment syntax (<code>//</code>) for all comments</li>
+<li>Mixins without properties should omit the <code data-astro-raw="">()</code> (e.g., <code data-astro-raw="">@include my-mixin</code>)</li>
+<li>Avoid the use of SASS color functions (e.g., <code data-astro-raw="">lighten(#000)</code>)</li>
+<li>Avoid the use of <code data-astro-raw="">!important</code></li>
+</ul><p><a href="">return to top</a></p><h3 id="comments">Comments</h3><ul>
+<li>Use the SCSS comment syntax (<code data-astro-raw="">//</code>) for all comments</li>
 <li>Use comment headings appropriately</li>
-</ul>
-<h3 id="example">Example</h3>
-<pre class="language-scss"><code data-astro-raw="" class="language-scss"><span class="token comment">//</span>
+</ul><p><a href="">return to top</a></p><h3 id="example">Example</h3><pre class="language-scss"><code data-astro-raw="" class="language-scss"><span class="token comment">//</span>
 <span class="token comment">// This is a comment heading</span>
 <span class="token comment">//</span>
 
@@ -100,216 +96,175 @@ This guide borrows concepts from <a href="http://codeguide.co/">Code Guide by @m
 <span class="token comment">// This is a good example</span>
 <span class="token selector">.foo,
 .bar </span><span class="token punctuation">{</span>
-<span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-<span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
-<span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Times New Roman'</span><span class="token punctuation">,</span> serif<span class="token punctuation">;</span> <span class="token comment">// This is another good example</span>
-<span class="token property">font-size</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
-<span class="token property">color</span><span class="token punctuation">:</span> #000<span class="token punctuation">;</span>
-<span class="token property">text-shadow</span><span class="token punctuation">:</span>
-0 1px 2px #ddd<span class="token punctuation">,</span>
-0 2px 2px #aaa<span class="token punctuation">;</span>
-<span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">'Hello world'</span><span class="token punctuation">;</span>
-<span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>#fff<span class="token punctuation">,</span> 0.15<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token property">box-shadow</span><span class="token punctuation">:</span> 0 0 10px 0 #000<span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+  <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Times New Roman'</span><span class="token punctuation">,</span> serif<span class="token punctuation">;</span> <span class="token comment">// This is another good example</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #000<span class="token punctuation">;</span>
+  <span class="token property">text-shadow</span><span class="token punctuation">:</span>
+    0 1px 2px #ddd<span class="token punctuation">,</span>
+    0 2px 2px #aaa<span class="token punctuation">;</span>
+  <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">'Hello world'</span><span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>#fff<span class="token punctuation">,</span> 0.15<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">box-shadow</span><span class="token punctuation">:</span> 0 0 10px 0 #000<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
 <span class="token selector">.foobar </span><span class="token punctuation">{</span>
-<span class="token property">color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
 
-<span class="token selector"><span class="token parent important">&amp;</span>:hover </span><span class="token punctuation">{</span> <span class="token property">text-decoration</span><span class="token punctuation">:</span> underline<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token parent important">&amp;</span>:hover </span><span class="token punctuation">{</span> <span class="token property">text-decoration</span><span class="token punctuation">:</span> underline<span class="token punctuation">;</span> <span class="token punctuation">}</span>
 
-<span class="token selector"><span class="token parent important">&amp;</span>:active </span><span class="token punctuation">{</span> <span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token parent important">&amp;</span>:active </span><span class="token punctuation">{</span> <span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span> <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
 <span class="token selector">.biz </span><span class="token punctuation">{</span> <span class="token property">font-size</span><span class="token punctuation">:</span> 16px<span class="token punctuation">;</span> <span class="token punctuation">}</span>
-<span class="token selector">.baz </span><span class="token punctuation">{</span> <span class="token property">font-size</span><span class="token punctuation">:</span> 24px<span class="token punctuation">;</span> <span class="token punctuation">}</span></code></pre>
-<h2 id="units">Units</h2>
-<ul>
-<li>Use <code>px</code> for things that should scale in a fixed manner</li>
-<li>Use <code>rem</code> for things that should scale with the root <code>font-size</code></li>
-<li>Use <code>em</code> for things that should scale with the element <code>font-size</code></li>
-<li>Use <code>%</code> for things that should scale with the parent element</li>
-<li>Use <code>vw</code> and <code>vh</code> for things that should scale with the viewport</li>
-<li><code>line-height</code> should be a unitless multiplier of <code>font-size</code></li>
-</ul>
-<h2 id="specificity--naming">Specificity &amp; Naming</h2>
-<h3 id="rule-specificity">Rule Specificity</h3>
-<p>Rules and properties should only be as specific as they need to be. Ideally, your selectors should maintain a flat structure.</p>
-<pre class="language-scss"><code data-astro-raw="" class="language-scss"><span class="token comment">// Bad 🙁</span>
+<span class="token selector">.baz </span><span class="token punctuation">{</span> <span class="token property">font-size</span><span class="token punctuation">:</span> 24px<span class="token punctuation">;</span> <span class="token punctuation">}</span></code></pre><p><a href="">return to top</a></p><h2 id="units">Units</h2><ul>
+<li>Use <code data-astro-raw="">px</code> for things that should scale in a fixed manner</li>
+<li>Use <code data-astro-raw="">rem</code> for things that should scale with the root <code data-astro-raw="">font-size</code></li>
+<li>Use <code data-astro-raw="">em</code> for things that should scale with the element <code data-astro-raw="">font-size</code></li>
+<li>Use <code data-astro-raw="">%</code> for things that should scale with the parent element</li>
+<li>Use <code data-astro-raw="">vw</code> and <code data-astro-raw="">vh</code> for things that should scale with the viewport</li>
+<li><code data-astro-raw="">line-height</code> should be a unitless multiplier of <code data-astro-raw="">font-size</code></li>
+</ul><p><a href="">return to top</a></p><h2 id="specificity--naming">Specificity &amp; Naming</h2><h3 id="rule-specificity">Rule Specificity</h3><p>Rules and properties should only be as specific as they need to be. Ideally, your selectors should maintain a flat structure.</p><pre class="language-scss"><code data-astro-raw="" class="language-scss"><span class="token comment">// Bad 🙁</span>
 <span class="token selector">.grandparent .parent .my-selector </span><span class="token punctuation">{</span>
-...
+  ...
 <span class="token punctuation">}</span>
 
 <span class="token comment">// Good 😀</span>
 <span class="token selector">.my-selector </span><span class="token punctuation">{</span>
-...
-<span class="token punctuation">}</span></code></pre>
-<h3 id="selectors">Selectors</h3>
-<ul>
+  ...
+<span class="token punctuation">}</span></code></pre><p><a href="">return to top</a></p><h3 id="selectors">Selectors</h3><ul>
 <li>Always use class selectors</li>
 <li>Do not use ID selectors</li>
 <li>Do not use type selectors</li>
 <li>Do not mix class selectors with ID or type selectors</li>
 <li>Use attribute selectors wisely</li>
-</ul>
-<p>Adhering to these guidelines <em>increases</em> the amount of style resuability and <em>reduces</em> the amount of overriding that needs to be done in the CSS codebase.</p>
-<pre class="language-scss"><code data-astro-raw="" class="language-scss"><span class="token comment">// Bad 🙁</span>
+</ul><p>Adhering to these guidelines <em>increases</em> the amount of style resuability and <em>reduces</em> the amount of overriding that needs to be done in the CSS codebase.</p><pre class="language-scss"><code data-astro-raw="" class="language-scss"><span class="token comment">// Bad 🙁</span>
 <span class="token selector">div </span><span class="token punctuation">{</span>
-...
+  ...
 <span class="token punctuation">}</span>
 
 <span class="token selector">div.my-selector </span><span class="token punctuation">{</span>
-...
+  ...
 <span class="token punctuation">}</span>
 
 <span class="token selector">#my-selector </span><span class="token punctuation">{</span>
-...
+  ...
 <span class="token punctuation">}</span>
 
 <span class="token comment">// Good 😀</span>
 <span class="token selector">.my-selector </span><span class="token punctuation">{</span>
-...
-<span class="token punctuation">}</span></code></pre>
-<h3 id="naming-conventions">Naming Conventions</h3>
-<p>Rules should be named semantically so that someone looking at just the markup should be able to determine what that rule is going to do.</p>
-<ul>
+  ...
+<span class="token punctuation">}</span></code></pre><p><a href="">return to top</a></p><h3 id="naming-conventions">Naming Conventions</h3><p>Rules should be named semantically so that someone looking at just the markup should be able to determine what that rule is going to do.</p><ul>
 <li>Use BEM style for components</li>
-<li>Use kebab-case for multiple words (e.g., <code>.my-block</code>)</li>
-<li>Use two underscores (<code>__</code>) to separate blocks from elements (e.g., <code>.my-block__my-element</code>)</li>
-<li>Use two dashes (<code>--</code>) to separate modifiers from blocks or elements (e.g., <code>.my-block--my-modifier</code> or <code>.my-block__my-element--my-modifier</code>)</li>
-</ul>
-<pre class="language-scss"><code data-astro-raw="" class="language-scss"><span class="token comment">// Component Classes</span>
+<li>Use kebab-case for multiple words (e.g., <code data-astro-raw="">.my-block</code>)</li>
+<li>Use two underscores (<code data-astro-raw="">__</code>) to separate blocks from elements (e.g., <code data-astro-raw="">.my-block__my-element</code>)</li>
+<li>Use two dashes (<code data-astro-raw="">--</code>) to separate modifiers from blocks or elements (e.g., <code data-astro-raw="">.my-block--my-modifier</code> or <code data-astro-raw="">.my-block__my-element--my-modifier</code>)</li>
+</ul><pre class="language-scss"><code data-astro-raw="" class="language-scss"><span class="token comment">// Component Classes</span>
 <span class="token selector">.media </span><span class="token punctuation">{</span>
-<span class="token selector">...
+  <span class="token selector">...
 
-<span class="token parent important">&amp;</span>__object </span><span class="token punctuation">{</span>
-<span class="token selector">...
+  <span class="token parent important">&amp;</span>__object </span><span class="token punctuation">{</span>
+    <span class="token selector">...
 
-<span class="token parent important">&amp;</span>--reversed </span><span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
+    <span class="token parent important">&amp;</span>--reversed </span><span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
 
-<span class="token selector"><span class="token parent important">&amp;</span>__body </span><span class="token punctuation">{</span>
-...
-<span class="token punctuation">}</span>
+  <span class="token selector"><span class="token parent important">&amp;</span>__body </span><span class="token punctuation">{</span>
+    ...
+  <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
 <span class="token comment">// Utility Classes</span>
 <span class="token selector">.text-sm </span><span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
 <span class="token selector">.text-md </span><span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
-<span class="token selector">.text-lg </span><span class="token punctuation">{</span> ... <span class="token punctuation">}</span></code></pre>
-<p>Class names are broken down first into a block (<code>.media</code>). Then, into elements (<code>.media__object</code> and <code>.media__body</code>). And finally into modifiers (<code>.media__object--reversed</code>).</p>
-<h3 id="nesting">Nesting</h3>
-<p>While nesting is a great feature of SASS, it can easily make things much more complex and hard to digest. Nesting should be limited to 3 levels or less.</p>
-<h3 id="extending">Extending</h3>
-<p>While extending selectors (<code>@extend</code>) is a great feature of SASS, it can easily make the output CSS much more complex and hard to digest so it is best to avoid using them. More often than not, it would make more sense to pull something out into a mixin rather than use an extend.</p>
-<h3 id="shorthand">Shorthand</h3>
-<p>Limit the use of shorthand declarations if you do not need to explicitly set additional declarations.</p>
-<pre class="language-scss"><code data-astro-raw="" class="language-scss"><span class="token comment">// Bad 🙁</span>
+<span class="token selector">.text-lg </span><span class="token punctuation">{</span> ... <span class="token punctuation">}</span></code></pre><p>Class names are broken down first into a block (<code data-astro-raw="">.media</code>). Then, into elements (<code data-astro-raw="">.media__object</code> and <code data-astro-raw="">.media__body</code>). And finally into modifiers (<code data-astro-raw="">.media__object--reversed</code>).</p><p><a href="">return to top</a></p><h3 id="nesting">Nesting</h3><p>While nesting is a great feature of SASS, it can easily make things much more complex and hard to digest. Nesting should be limited to 3 levels or less.</p><p><a href="">return to top</a></p><h3 id="extending">Extending</h3><p>While extending selectors (<code data-astro-raw="">@extend</code>) is a great feature of SASS, it can easily make the output CSS much more complex and hard to digest so it is best to avoid using them. More often than not, it would make more sense to pull something out into a mixin rather than use an extend.</p><p><a href="">return to top</a></p><h3 id="shorthand">Shorthand</h3><p>Limit the use of shorthand declarations if you do not need to explicitly set additional declarations.</p><pre class="language-scss"><code data-astro-raw="" class="language-scss"><span class="token comment">// Bad 🙁</span>
 <span class="token selector">.my-selector </span><span class="token punctuation">{</span>
-<span class="token property">margin</span><span class="token punctuation">:</span> 10px 0 0 0<span class="token punctuation">;</span>
-<span class="token property">border-radius</span><span class="token punctuation">:</span> 4px 0 0 0<span class="token punctuation">;</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> 10px 0 0 0<span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 4px 0 0 0<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
 <span class="token comment">// Good 😀</span>
 <span class="token selector">.my-selector </span><span class="token punctuation">{</span>
-<span class="token property">margin-top</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
-<span class="token property">border-top-left-radius</span><span class="token punctuation">:</span> 4px<span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<h3 id="media-queries">Media Queries</h3>
-<p>SASS allows media queries to be nested inside of a selector. This can make our code very easy to digest when working in responsive styles.</p>
-<pre class="language-scss"><code data-astro-raw="" class="language-scss"><span class="token selector">.my-selector </span><span class="token punctuation">{</span>
-...
+  <span class="token property">margin-top</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+  <span class="token property">border-top-left-radius</span><span class="token punctuation">:</span> 4px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre><p><a href="">return to top</a></p><h3 id="media-queries">Media Queries</h3><p>SASS allows media queries to be nested inside of a selector. This can make our code very easy to digest when working in responsive styles.</p><pre class="language-scss"><code data-astro-raw="" class="language-scss"><span class="token selector">.my-selector </span><span class="token punctuation">{</span>
+  ...
 
-<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 1024px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
-...
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-<h3 id="variables">Variables</h3>
-<p>SASS variables should be used wherever a property value may need to be repeated across the codebase (e.g., color values, breakpoints).</p>
-<ul>
-<li>Use kebab-case (e.g., <code>$color-white</code>)</li>
+  <span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 1024px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    ...
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre><p><a href="">return to top</a></p><h3 id="variables">Variables</h3><p>SASS variables should be used wherever a property value may need to be repeated across the codebase (e.g., color values, breakpoints).</p><ul>
+<li>Use kebab-case (e.g., <code data-astro-raw="">$color-white</code>)</li>
 <li>Use semantic naming conventions</li>
-</ul>
-<pre class="language-scss"><code data-astro-raw="" class="language-scss"><span class="token comment">// Bad 🙁</span>
+</ul><pre class="language-scss"><code data-astro-raw="" class="language-scss"><span class="token comment">// Bad 🙁</span>
 <span class="token property"><span class="token variable">$alpha</span></span><span class="token punctuation">:</span> #000<span class="token punctuation">;</span>
 <span class="token property"><span class="token variable">$beta</span></span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
 
 <span class="token comment">// Good 😀</span>
 <span class="token property"><span class="token variable">$color-black</span></span><span class="token punctuation">:</span> #000<span class="token punctuation">;</span>
-<span class="token property"><span class="token variable">$color-white</span></span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span></code></pre>
-<h2 id="ordering">Ordering</h2>
-<ul>
-<li>Order side values by <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code></li>
+<span class="token property"><span class="token variable">$color-white</span></span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span></code></pre><p><a href="">return to top</a></p><h2 id="ordering">Ordering</h2><ul>
+<li>Order side values by <code data-astro-raw="">top</code>, <code data-astro-raw="">right</code>, <code data-astro-raw="">bottom</code>, <code data-astro-raw="">left</code></li>
 <li>Declare mixins first, then regular properties</li>
 <li>Psuedo selectors should come before other selectors</li>
-</ul>
-<pre class="language-scss"><code data-astro-raw="" class="language-scss"><span class="token selector">.my-block </span><span class="token punctuation">{</span>
-<span class="token keyword">@include</span> my-mixin<span class="token punctuation">;</span>
+</ul><pre class="language-scss"><code data-astro-raw="" class="language-scss"><span class="token selector">.my-block </span><span class="token punctuation">{</span>
+  <span class="token keyword">@include</span> my-mixin<span class="token punctuation">;</span>
 
-<span class="token comment">// Positioning</span>
-<span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-<span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
-<span class="token property">right</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
-<span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
-<span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
-<span class="token property">z-index</span><span class="token punctuation">:</span> 10<span class="token punctuation">;</span>
+  <span class="token comment">// Positioning</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+  <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">right</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">z-index</span><span class="token punctuation">:</span> 10<span class="token punctuation">;</span>
 
-<span class="token comment">// Box Model</span>
-<span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
-<span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
-<span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
-<span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
-<span class="token property">padding-top</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
-<span class="token property">padding-bottom</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
-<span class="token property">margin</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
-<span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+  <span class="token comment">// Box Model</span>
+  <span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token property">padding-top</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+  <span class="token property">padding-bottom</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+  <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
 
-<span class="token comment">// Typography</span>
-<span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Times New Roman'</span><span class="token punctuation">,</span> serif<span class="token punctuation">;</span>
-<span class="token property">font-size</span><span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span>
-<span class="token property">font-style</span><span class="token punctuation">:</span> italic<span class="token punctuation">;</span>
-<span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
-<span class="token property">line-height</span><span class="token punctuation">:</span> 1.5<span class="token punctuation">;</span>
-<span class="token property">color</span><span class="token punctuation">:</span> #000<span class="token punctuation">;</span>
-<span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
-<span class="token property">text-decoration</span><span class="token punctuation">:</span> underline<span class="token punctuation">;</span>
-<span class="token property">text-shadow</span><span class="token punctuation">:</span> 0 1px 0 #fff<span class="token punctuation">;</span>
-<span class="token property">text-transform</span><span class="token punctuation">:</span> uppercase<span class="token punctuation">;</span>
+  <span class="token comment">// Typography</span>
+  <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Times New Roman'</span><span class="token punctuation">,</span> serif<span class="token punctuation">;</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span>
+  <span class="token property">font-style</span><span class="token punctuation">:</span> italic<span class="token punctuation">;</span>
+  <span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+  <span class="token property">line-height</span><span class="token punctuation">:</span> 1.5<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #000<span class="token punctuation">;</span>
+  <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  <span class="token property">text-decoration</span><span class="token punctuation">:</span> underline<span class="token punctuation">;</span>
+  <span class="token property">text-shadow</span><span class="token punctuation">:</span> 0 1px 0 #fff<span class="token punctuation">;</span>
+  <span class="token property">text-transform</span><span class="token punctuation">:</span> uppercase<span class="token punctuation">;</span>
 
-<span class="token comment">// Accessibility &amp; Interaction</span>
-<span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span>
+  <span class="token comment">// Accessibility &amp; Interaction</span>
+  <span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span>
 
-<span class="token comment">// Background &amp; Borders</span>
-<span class="token property">background</span><span class="token punctuation">:</span> #aaa<span class="token punctuation">;</span>
-<span class="token property">border</span><span class="token punctuation">:</span> 10px solid #000<span class="token punctuation">;</span>
-<span class="token property">box-shadow</span><span class="token punctuation">:</span> 0 0 10px #000<span class="token punctuation">;</span>
+  <span class="token comment">// Background &amp; Borders</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> #aaa<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 10px solid #000<span class="token punctuation">;</span>
+  <span class="token property">box-shadow</span><span class="token punctuation">:</span> 0 0 10px #000<span class="token punctuation">;</span>
 
-<span class="token comment">// Transitions &amp; Animations</span>
-<span class="token property">transition</span><span class="token punctuation">:</span> all 100ms ease<span class="token punctuation">;</span>
+  <span class="token comment">// Transitions &amp; Animations</span>
+  <span class="token property">transition</span><span class="token punctuation">:</span> all 100ms ease<span class="token punctuation">;</span>
 
-<span class="token selector"><span class="token parent important">&amp;</span>:before </span><span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token parent important">&amp;</span>:before </span><span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
 
-<span class="token selector"><span class="token parent important">&amp;</span>:hover </span><span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token parent important">&amp;</span>:hover </span><span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
 
-<span class="token selector"><span class="token parent important">&amp;</span>--my-modifier </span><span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token parent important">&amp;</span>--my-modifier </span><span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
 
-<span class="token selector"><span class="token parent important">&amp;</span>__my-element </span><span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-<h2 id="linting">Linting</h2>
-<p>It is best to leverage a linter like <a href="https://github.com/stylelint/stylelint">stylelint</a> to make it easy to adhere to the following guidelines. You can install this repository through your package manager and point to it in your own stylelint config file. Alternatively, you can copy the stylelint config file (<a href="https://github.com/alexchantastic/scss-style-guide/blob/master/.stylelintrc"><code>.stylelintrc</code></a>) included in this repository into your project.</p>
-<h3 id="installation">Installation</h3>
-<h4 id="yarn">Yarn</h4>
-<pre class="language-null"><code data-astro-raw="" class="language-null">yarn add stylelint scss-style-guide --dev</code></pre>
-<h4 id="npm">npm</h4>
-<pre class="language-null"><code data-astro-raw="" class="language-null">npm install stylelint scss-style-guide --save-dev</code></pre>
-<h4 id="stylelintrc"><code>.stylelintrc</code></h4>
-<pre class="language-null"><code data-astro-raw="" class="language-null">{
-"extends": [
-"scss-style-guide"
-]
-}</code></pre>
-
-        </article>
-      </section>
+  <span class="token selector"><span class="token parent important">&amp;</span>__my-element </span><span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre><p><a href="">return to top</a></p><h2 id="linting">Linting</h2><p>It is best to leverage a linter like <a href="https://github.com/stylelint/stylelint">stylelint</a> to make it easy to adhere to the following guidelines. You can install this repository through your package manager and point to it in your own stylelint config file. Alternatively, you can copy the stylelint config file (<a href="https://github.com/alexchantastic/scss-style-guide/blob/master/.stylelintrc"><code data-astro-raw="">.stylelintrc</code></a>) included in this repository into your project.</p><p><a href="">return to top</a></p><h3 id="installation">Installation</h3><h4 id="yarn">Yarn</h4><pre class="language-null"><code data-astro-raw="" class="language-null">yarn add stylelint scss-style-guide --dev</code></pre><p><a href="">return to top</a></p><h4 id="npm">npm</h4><pre class="language-null"><code data-astro-raw="" class="language-null">npm install stylelint scss-style-guide --save-dev</code></pre><p><a href="">return to top</a></p><h4 id="stylelintrc"><code data-astro-raw="">.stylelintrc</code></h4><pre class="language-null"><code data-astro-raw="" class="language-null">{
+  "extends": [
+    "scss-style-guide"
+  ]
+}</code></pre><p><a href="">return to top</a></p>
+          </article>
+        </section>
+      </div>
     </main>
   </body></html>
